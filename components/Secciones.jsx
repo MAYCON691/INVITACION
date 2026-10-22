@@ -113,29 +113,34 @@ export function Recepcion() {
         <span className="eyebrow rv">Tarjeta de embarque</span>
         <h2 className="sec-title rv">Celebremos <em>juntos</em></h2>
         <div className="ticket tilt rv" data-rv="zoom" style={{ textAlign: 'left' }}>
-          <div className="t-main">
-            <div className="t-bar">CELEBREMOS</div>
-            <div className="t-body">
-              <div className="t-brand">
-                <div><div className="hd">NUESTRA BODA</div><div className="sc">Vidal &amp; Blanca</div><div className="nc">¡NOS CASAMOS!</div></div>
-                <svg className="t-heart" viewBox="0 0 120 110"><use href="#heartMini" /></svg>
+          <div className="t-bar">CELEBREMOS</div>
+          <div className="t-body">
+            <div className="t-brand">
+              <div>
+                <div className="hd">NUESTRA BODA</div>
+                <div className="sc">Vidal &amp; Blanca</div>
+                <div className="nc">¡NOS CASAMOS!</div>
               </div>
-              <div className="t-grid">
-                <div className="t-f"><small>Recepción</small><span><b>ARENA BRANIFF</b> / Horas 15:00 p.m.</span></div>
-                <div className="t-f"><small>Vuelo</small><span>05 . 12 . 2026</span></div>
-                <div className="t-f"><small>Dirección</small><span>Ubicado al lado del polideportivo Héroes de Octubre, Av. Juan Pablo II (16 de Julio).</span></div>
-                <div className="t-f"><small>Destino</small><span>Ciudad El Alto</span></div>
-              </div>
-              <div className="t-note">
-                <span>Queremos que disfrutes con nosotros al máximo, por ello la recepción está planificada para adultos</span>
-                <span><b>Código de vestimenta: formal</b></span>
-              </div>
+              <svg className="t-heart" viewBox="0 0 120 110"><use href="#heartMini" /></svg>
             </div>
-          </div>
-          <div className="t-stub">
-            <h4>PRIMERA CLASE</h4>
-            <p>Tu presencia desde el inicio hará que este día sea aún más especial. Te esperamos a tiempo</p>
-            <a className="btn btn-gold" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Arena+Braniff+El+Alto+Bolivia"><Pin />Cómo llegar</a>
+
+            <div className="t-grid">
+              <div className="t-f"><small>Recepción</small><span><b>ARENA BRANIFF</b> / Horas 15:00 p.m.</span></div>
+              <div className="t-f"><small>Vuelo</small><span>05 . 12 . 2026</span></div>
+              <div className="t-f"><small>Dirección</small><span>Ubicado al lado del polideportivo Héroes de Octubre, Av. Juan Pablo II (16 de Julio).</span></div>
+              <div className="t-f"><small>Destino</small><span>Ciudad El Alto</span></div>
+            </div>
+
+            <p className="t-wish">Tu presencia desde el inicio hará que este día sea aún más especial. Te esperamos a tiempo.</p>
+
+            <a className="btn btn-gold t-go" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Arena+Braniff+El+Alto+Bolivia">
+              <Pin />Cómo llegar
+            </a>
+
+            <div className="t-note">
+              <span>Queremos que disfrutes con nosotros al máximo, por ello la recepción está planificada para adultos</span>
+              <span><b>Código de vestimenta: formal</b></span>
+            </div>
             <div className="barcode" />
           </div>
         </div>
@@ -143,7 +148,6 @@ export function Recepcion() {
     </section>
   );
 }
-
 /* ---------- Padrinos ---------- */
 const STAMPS = [
   { l: '2%', b: '70px', r: '-8deg', d: '.1s', c: '#e34848', t: 'ARRIVAL', n: 'MADRID', s: 'SPAIN' },

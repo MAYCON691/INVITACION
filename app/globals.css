@@ -203,29 +203,24 @@ section{position:relative;padding:120px 0;overflow:hidden}
    10. BOARDING PASS (RECEPCIÓN)
    ===================================================================== */
 .board{background:linear-gradient(180deg,#d6e6ef,var(--sky-4))}
-.ticket{display:grid;grid-template-columns:1fr 250px;margin-top:60px;position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(34,56,74,.22);background:#fff;transition:transform .25s}
-.t-main{position:relative;overflow:hidden}
-.t-main::after{content:"";position:absolute;top:0;bottom:0;left:-140px;width:110px;background:linear-gradient(100deg,transparent,rgba(207,169,104,.28),transparent);animation:scan 6s ease-in-out infinite;pointer-events:none}
+.ticket{margin:50px auto 0;max-width:860px;position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(34,56,74,.22);background:#fff;transition:transform .25s}
+.ticket::after{content:"";position:absolute;top:0;bottom:0;left:-140px;width:110px;background:linear-gradient(100deg,transparent,rgba(207,169,104,.28),transparent);animation:scan 6s ease-in-out infinite;pointer-events:none;z-index:2}
 @keyframes scan{0%{left:-140px}55%,100%{left:110%}}
 .t-bar{background:var(--sky);color:#fff;padding:14px 26px;font:700 1.15rem var(--f-sans);letter-spacing:.12em}
-.t-body{padding:24px 30px 26px;position:relative;background:linear-gradient(135deg,#fff,#f1f7fb)}
-.t-brand{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.t-brand .hd{font:700 1.2rem var(--f-sans);letter-spacing:.1em;color:var(--gold-3)}
-.t-brand .sc{font-family:var(--f-script);font-size:clamp(2.6rem,6vw,4rem);color:var(--gold);line-height:1}
+.t-body{padding:26px 32px 28px;position:relative;background:linear-gradient(135deg,#fff,#f1f7fb)}
+.t-brand{display:flex;align-items:center;gap:20px}
+.t-brand .hd{font:700 1.1rem var(--f-sans);letter-spacing:.1em;color:var(--gold-3)}
+.t-brand .sc{font-family:var(--f-script);font-size:clamp(2.6rem,6vw,4rem);color:var(--gold);line-height:1.05}
 .t-brand .nc{font:700 .95rem var(--f-sans);color:var(--ink);letter-spacing:.08em}
-.t-heart{width:120px;margin-left:auto}
-.t-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px 30px;margin-top:20px}
+.t-heart{width:110px;flex:none;margin-left:auto}
+.t-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px 30px;margin-top:22px}
 .t-f small{display:block;font:700 .72rem var(--f-sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-3)}
 .t-f span{font:500 1.05rem var(--f-sans);color:var(--ink)}
 .t-f span b{font-weight:700;letter-spacing:.04em}
-.t-note{margin-top:20px;font:500 .78rem var(--f-sans);letter-spacing:.04em;text-transform:uppercase;border-top:1px dashed rgba(34,56,74,.3);padding-top:14px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.t-stub{background:linear-gradient(180deg,var(--sky) 0 62px,#fff 62px);position:relative;border-left:3px dashed rgba(34,56,74,.65);display:flex;flex-direction:column;align-items:center;text-align:center}
-.t-stub h4{height:62px;display:grid;place-items:center;color:#fff;font:700 1.15rem var(--f-sans);letter-spacing:.1em}
-.t-stub p{padding:14px 18px 6px;font:700 .74rem var(--f-sans);letter-spacing:.06em;text-transform:uppercase}
-.t-stub .btn{margin:12px 0 16px}
-.barcode{height:70px;width:calc(100% - 36px);margin:auto 0 18px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 10px,var(--ink) 10px 14px,transparent 14px 16px);border-radius:3px}
-.ticket::before,.ticket::after{content:"";position:absolute;right:222px;width:30px;height:30px;border-radius:50%;background:var(--sky-4);z-index:3}
-.ticket::before{top:-15px}.ticket::after{bottom:-15px}
+.t-wish{margin-top:22px;font:700 .74rem var(--f-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);max-width:520px}
+.t-go{margin:16px 0 4px}
+.t-note{margin-top:20px;font:500 .78rem var(--f-sans);letter-spacing:.04em;text-transform:uppercase;border-top:1px dashed rgba(34,56,74,.3);padding-top:14px;display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center}
+.barcode{height:44px;width:100%;margin-top:18px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 10px,var(--ink) 10px 14px,transparent 14px 16px);border-radius:3px;opacity:.85}
 
 /* =====================================================================
    11. PADRINOS (SELLOS DE VIAJE)
@@ -426,4 +421,50 @@ footer .names,footer h4{font-family:var(--f-script);font-size:2.6rem;font-weight
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none;filter:none}
+}
+/* =====================================================================
+   20. MÓVIL: SOLO DESLIZAR (OPTIMIZADO PARA CELULAR)
+   ===================================================================== */
+@media (max-width:900px){
+  html{scroll-behavior:auto}
+  body{overscroll-behavior-y:none}
+  .stage,.hero{min-height:100svh}
+  #glow{display:none}
+  .cloud{display:none}
+  .glass{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tilt{transform:none!important}
+  .rv{filter:none;transition-duration:.7s}
+  .rv[data-rv="left"],.rv[data-rv="right"]{transform:translateY(34px)}
+}
+@media (max-width:700px){
+  /* tarjeta de embarque a una columna */
+  .ticket{margin-top:36px;border-radius:22px}
+  .t-bar{padding:12px 20px;font-size:1rem;text-align:center}
+  .t-body{padding:22px 20px 24px;text-align:center}
+  .t-brand{flex-direction:column-reverse;gap:6px;text-align:center}
+  .t-heart{width:86px;margin:0 auto}
+  .t-brand .sc{font-size:3rem}
+  .t-grid{grid-template-columns:1fr;gap:16px;text-align:center}
+  .t-f span{font-size:1rem}
+  .t-wish{margin:20px auto 0;font-size:.7rem;line-height:1.6}
+  .t-go{width:100%;max-width:280px;justify-content:center;margin:16px auto 4px}
+  .t-note{justify-content:center;text-align:center;font-size:.68rem;line-height:1.6}
+  .barcode{height:36px}
+
+  /* resto de secciones */
+  .hero{padding-inline:0}
+  .passport,.invite-card,.gp-card,.lg-card{max-width:100%}
+  .parents{grid-template-columns:1fr!important}
+  .count{gap:10px!important}
+  .tile{min-width:0}
+  .stage .big{font-size:clamp(5rem,38vw,9rem)}
+  #music{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+  .nav-dots,.dots{display:none}
+  img,svg,video{max-width:100%}
+}
+@media (max-width:420px){
+  .t-brand .sc{font-size:2.6rem}
+  .t-body{padding:20px 16px 22px}
+  .sec-title{font-size:1.9rem}
+  .btn{padding:14px 22px;font-size:.78rem}
 }
