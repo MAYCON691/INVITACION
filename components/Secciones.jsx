@@ -217,7 +217,36 @@ export function Logistica() {
     </section>
   );
 }
-
+/* ---------- Contacto MAYK TECNOLOGY ---------- */
+export function Contacto() {
+  const msg = encodeURIComponent('Hola MAYK TECNOLOGY, vi la invitación de boda de Vidal y Blanca. Quiero que me asesores con una invitación digital.');
+  return (
+    <section className="mayk" id="mayk" data-sec>
+      <div className="wrap center">
+        <span className="eyebrow rv">Esta invitación fue creada por</span>
+        <h2 className="sec-title rv">MAYK <em>Technology</em></h2>
+        <div className="glass mayk-card rv">
+          <div className="mayk-logo">MAYK <em>TECNOLOGY</em></div>
+          <p className="mayk-tag">¿Quieres una invitación digital como esta? Te asesoro con tu diseño, música, confirmación por WhatsApp y más.</p>
+          <div className="mayk-list">
+            <span>Invitaciones digitales</span>
+            <span>Páginas web</span>
+            <span>Sistemas web</span>
+          </div>
+          <div className="mayk-info">
+            <div>WhatsApp: <a href="https://wa.me/59162341128">+591 62341128</a></div>
+            <div>Correo: <a href="mailto:mayconapaza23@gmail.com">mayconapaza23@gmail.com</a></div>
+          </div>
+          <div className="btn-row">
+            <a className="btn btn-gold" target="_blank" rel="noopener noreferrer" href={`https://wa.me/59162341128?text=${msg}`}>Quiero que me asesores</a>
+            <a className="btn btn-sky" href="mailto:mayconapaza23@gmail.com?subject=Invitaci%C3%B3n%20digital">Enviar correo</a>
+          </div>
+          <p className="mayk-work">Trabajo realizado: <a href="https://360.terminalelalto.gob.bo/" target="_blank" rel="noopener noreferrer">Terminal Metropolitana El Alto 360°</a></p>
+        </div>
+      </div>
+    </section>
+  );
+}
 /* ---------- Footer ---------- */
 export function Footer() {
   return (

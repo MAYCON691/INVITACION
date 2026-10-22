@@ -8,6 +8,9 @@ import Cuenta from '../components/Cuenta';
 import Galeria from '../components/Galeria';
 import Cartelera from '../components/Cartelera';
 import Rsvp from '../components/Rsvp';
+import {
+  FlyDiv, Invitacion, Pasaporte, Cronograma, Recepcion, Padrinos, Logistica, Contacto, Footer,
+} from '../components/Secciones';
 import { SvgDefs } from '../components/Icons';
 import {
   FlyDiv, Invitacion, Pasaporte, Cronograma, Recepcion, Padrinos, Logistica, Footer,
@@ -36,6 +39,7 @@ export default function Page() {
       <Galeria />
       <Cartelera />
       <Rsvp />
+      <Contacto />
       <Footer />
     </>
   );
