@@ -7,7 +7,7 @@ const vibes = Great_Vibes({ subsets: ['latin'], weight: '400', variable: '--font
 const montserrat = Montserrat({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500', '600', '700'], variable: '--font-montserrat', display: 'swap' });
 
 export const metadata = {
-  title: 'Vidal & Blanca · Pasaporte a nuestra boda',
+  title: 'Vidal y Blanca · Pasaporte a nuestra boda',
   description: 'Acompáñanos al mejor viaje de nuestras vidas. 05 de diciembre de 2026 · El Alto, Bolivia.',
 };
 
