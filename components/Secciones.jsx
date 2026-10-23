@@ -23,7 +23,7 @@ export function Invitacion() {
         <div className="glass invite-card rv">
           {SPK.map(([l, t, d], i) => <i key={i} className="spk" style={{ left: l, top: t, animationDelay: d }} />)}
           <p className="lead">¡¡¡Acompáñanos<br />al mejor viaje de nuestras vidas!</p>
-          <div className="script-names gold-text"><span>Vidal</span><span className="amp">&amp;</span><span>Blanca</span></div>
+          <div className="script-names gold-text"><span>Vidal</span><span className="amp">y</span><span>Blanca</span></div>
           <p className="quote">“El amor es un viaje y estamos agradecidos por cada destino juntos”</p>
           <p className="bless">Con la bendición de Dios y nuestros padres:</p>
           <div className="parents">
@@ -61,8 +61,8 @@ export function Pasaporte() {
             </div>
           </div>
           <div className="mrz">
-            <div>{'<<<<<<<ACOMPAÑAMOS<<A<<LA<<SIGUIENTE<<AVENTURA<<DE<<NUESTRA<<VIDA<<<<<'}</div>
-            <div>{'<<<<<<DICIEMBRE<<05<<2026<<<<<<<<<<>>>>VIDAL>>BLANCA>>>>>>>>>>'}</div>
+            <div>{'<<<<<<ACOMPAÑAMOS<<A<<LA<<SIGUIENTE<<AVENTURA<<DE<<NUESTRA<<VIDA<<<<<'}</div>
+            <div>{'<<<<<DICIEMBRE<<05<<2026<<<<<<<<<<>>>>VIDAL>>BLANCA>>>>>>>>>>'}</div>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function Recepcion() {
             <div className="t-brand">
               <div>
                 <div className="hd">NUESTRA BODA</div>
-                <div className="sc">Vidal &amp; Blanca</div>
+                <div className="sc">Vidal y Blanca</div>
                 <div className="nc">¡NOS CASAMOS!</div>
               </div>
               <svg className="t-heart" viewBox="0 0 120 110"><use href="#heartMini" /></svg>
@@ -189,7 +189,6 @@ export function Padrinos() {
     </section>
   );
 }
-
 /* ---------- Logística ---------- */
 export function Logistica() {
   return (
@@ -261,7 +260,7 @@ export function Footer() {
         </g>
       </svg>
       <div className="wrap">
-        <div className="script-names"><span>Vidal</span> <span className="amp">&amp;</span> <span>Blanca</span></div>
+        <div className="script-names"><span>Vidal</span> <span className="amp">y</span> <span>Blanca</span></div>
         <p>05 de diciembre de 2026 · El Alto, Bolivia</p>
         <small>Gracias por ser parte de nuestro viaje</small>
       </div>
