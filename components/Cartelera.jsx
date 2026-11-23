@@ -2,33 +2,21 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { ACTS } from '../lib/data';
 
-const EXT = ['png', 'jpg', 'jpeg', 'webp', 'PNG', 'JPG', 'JPEG', 'WEBP'];
 const N = ACTS.length;
 
-/* Tarjeta del carrusel: busca la foto en /public/cartelera con varias extensiones */
+/* Tarjeta del carrusel: la foto ya viene precargada por el Preloader */
 function Card({ a, i, d, onPick }) {
-  const [src, setSrc] = useState(null);
-
-  useEffect(() => {
-    let dead = false, k = 0;
-    const im = new Image();
-    const next = () => { if (dead || k >= EXT.length) return; im.src = `/cartelera/${a.img}.${EXT[k++]}`; };
-    im.onload = () => { if (!dead) setSrc(im.getAttribute('src')); };
-    im.onerror = next;
-    next();
-    return () => { dead = true; im.onload = null; im.onerror = null; };
-  }, [a.img]);
-
+  const [ok, setOk] = useState(true);
   const ad = Math.abs(d);
   return (
     <article
-      className={`cf-card${d === 0 ? ' act' : ''}${ad > 3 ? ' far' : ''}${src ? ' has-img' : ''}`}
+      className={`cf-card${d === 0 ? ' act' : ''}${ad > 3 ? ' far' : ''}${ok ? ' has-img' : ''}`}
       style={{ '--bg': a.bg, '--d': d, '--ad': ad, zIndex: 20 - ad }}
-      onClick={() => onPick(i, d, src)}
+      onClick={() => onPick(i, d, ok ? a.src : null)}
       aria-label={a.n}
     >
       <div className="mono">{a.n[0]}</div>
-      {src && <img src={src} alt={a.n} draggable={false} />}
+      {ok && <img src={a.src} alt={a.n} draggable={false} decoding="async" onError={() => setOk(false)} />}
       <span className="num">{String(i + 1).padStart(2, '0')}</span>
       <span className="tag">{a.t}</span>
       <div className="info"><h3>{a.n}</h3><p>{a.s}</p></div>
