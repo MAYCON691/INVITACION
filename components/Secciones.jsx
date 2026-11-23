@@ -241,7 +241,7 @@ export function Contacto() {
             <a className="btn btn-gold" target="_blank" rel="noopener noreferrer" href={`https://wa.me/59162341128?text=${msg}`}>Quiero que me asesores</a>
             <a className="btn btn-sky" href="mailto:mayconapaza23@gmail.com?subject=Invitaci%C3%B3n%20digital">Enviar correo</a>
           </div>
-          <p className="mayk-work">Trabajo realizado: <a href="https://360.terminalelalto.gob.bo/" target="_blank" rel="noopener noreferrer">Terminal Metropolitana El Alto 360°</a></p>
+         
         </div>
       </div>
     </section>
